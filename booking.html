@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Trip - Trivanta Voyages</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <link rel="website icon" href="img/webpagelogo.png" />
+
+    <!-- <style>
+      :root {
+        --primary: #182e43;
+        --secondary: #d16743;
+        --light-text: #f0f0f0;
+        --light-blue: #026873;
+        --black: #000000;
+        --white: #ffffff;
+        --gray: #333333;
+      }
+      form {
+        max-width: 1400px;
+        padding: 0 2rem 2rem 2rem;
+        margin: auto;
+        animation: fadeIn 1s ease;
+      }
+      label {
+        display: block;
+        margin-top: 1rem;
+        color: var(--primary);
+        font-size: 25px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.7rem;
+        margin-top: 0.3rem;
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        color: var(--primary);
+        font-size: 18px;
+      }
+
+      .submit-btn {
+        margin-top: 1.5rem;
+        width: 30%;
+        padding: 0.5rem;
+        background: var(--secondary);
+        border: none;
+        border-radius: 5px;
+        color: var(--light-text);
+        font-weight: 400;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background: var(--light-blue);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(1000px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+      .book-column1 {
+        max-width: 1400px;
+        margin: auto;
+        padding: 2rem;
+      }
+
+      .head-form {
+        text-align: center;
+      }
+
+      .book-details {
+        max-width: 1400px;
+        margin: auto;
+      }
+
+      .book-details .column2 {
+        padding: 0 2rem 1rem;
+      }
+      .book-details .column1 {
+        padding: 2rem;
+      }
+
+      .book-details h3 {
+        margin-bottom: 1rem;
+      }
+
+      .book-details ul {
+        list-style-position: outside;
+        padding-left: 1rem;
+        line-height: 2rem;
+      }
+
+      .book-details li::marker {
+        color: var(--secondary);
+      }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="img/final-logo.png" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="package.html">Packages</a>
+          <a href="contact-us.html">Contact Us</a>
+          <button class="btn-book">
+            <a href="booking.html">Book Now</a>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <h1 class="page-title" data-aos="zoom-in" data-aos-delay="0">
+        Book Your Dream Vacay Today!
+      </h1>
+    </div>
+
+    <div class="book-details">
+      <div class="column1" data-aos="fade-up" data-aos-delay="0">
+        <h3>Why Book With Us?</h3>
+        <ul>
+          <li>100% Secure Booking :- Your information is safe with us.</li>
+          <li>
+            Handpicked Packages :- Only the best experiences, tailored for every
+            traveler.
+          </li>
+          <li>24/7 Support :- We're here to help, anytime.</li>
+          <li>No Hidden Charges :- Transparent pricing, always.</li>
+          <li>Flexible Travel Dates - Adjust your plans with ease.</li>
+        </ul>
+      </div>
+      <div class="column2" data-aos="fade-up" data-aos-delay="0">
+        <h3>Ready for Your Next Getaway?</h3>
+        <p>
+          Let the journey begin! Fill out the form below and preview your
+          holiday plan before submitting. A trip of a lifetime is just a few
+          clicks away.
+        </p>
+      </div>
+    </div>
+
+    <form
+      id="bookingForm"
+      class="book-form"
+      data-aos="fade-up"
+      data-aos-delay="10"
+    >
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="e.g. 9876543210"
+        required
+        maxlength="10"
+        minlength="10"
+      />
+
+      <label for="destination">Destination</label>
+      <select id="destination" required>
+        <option value="">Select Destination</option>
+        <option>Dubai</option>
+        <option>Thailand</option>
+        <option>Bali</option>
+        <option>Switzerland</option>
+        <option>Singapore</option>
+        <option>Paris</option>
+      </select>
+
+      <label for="start">Start Date</label>
+      <input type="date" id="start" required />
+
+      <label for="end">End Date</label>
+      <input type="date" id="end" required />
+
+      <div class="form-group">
+        <label for="adults">Number of Adults</label>
+        <input
+          type="number"
+          id="adults"
+          name="adults"
+          min="1"
+          value="1"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="children">Number of Children</label>
+        <input type="number" id="children" name="children" min="0" value="0" />
+      </div>
+
+      <label for="notes">Special Notes</label>
+      <textarea id="notes" rows="3"></textarea>
+
+      <div class="summary" id="summaryBox"></div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <!-- Thank You Message (hidden by default) -->
+    <div id="thankYouMessage" class="submit-message">
+      <h6>
+        Thank you for booking with Trivanta Voyages! We'll contact you soon. Have a nice day!!
+      </h6>
+    </div>
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="package.html">Packages</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Holiday Booking</a></li>
+            <li><a href="#">Flight + Hotel</a></li>
+            <li><a href="#">Group Packages</a></li>
+            <li><a href="#">Adventure Tours</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i
+            ><a href="tel:+919876543210">+91 9876543210</a>
+          </div>
+          <div class="icon">
+            <i class="fas fa-envelope"></i
+            ><a href="mailto:support@holidaypack.com"
+              >support@holidaypack.com</a
+            >
+          </div>
+          <div class="icon">
+            <i class="fas fa-map-marker-alt"></i
+            ><a href="https://maps.app.goo.gl/F8pwsDQYES2kvSbR6"
+              >Ahmedabad, Gujarat, India</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Trivanta Voyages. All rights reserved.
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration
+        once: true, // animate only once
+      });
+    </script>
+    <script>
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("start").setAttribute("min", today);
+      document.getElementById("end").setAttribute("min", today);
+    </script>
+
+    <script>
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Stop form from refreshing the page
+
+          // Show the thank you message
+          document.getElementById("thankYouMessage").style.display = "block";
+
+          // Optionally, clear form
+          document.getElementById("bookingForm").reset();
+        });
+    </script>
+  </body>
+</html>
